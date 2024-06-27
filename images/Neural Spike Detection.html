@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/sites/default/files/AN_org_icon.ico" type="image/vnd.microsoft.icon" />
+<link rel="canonical" href="https://auditoryneuroscience.org/node/120" />
+<link rel="shortlink" href="https://auditoryneuroscience.org/node/120" />
+<link rel="prev" href="/node/118" />
+<link rel="up" href="/EphysPipeline" />
+<link rel="next" href="/node/117" />
+
+    <title> Spike Detection | HK Auditory Neuroscience</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_XH9izKEWbfKRIdE6ljIIJ0CicvsivZ9i9e1ildHtLPQ.css?delta=0&amp;language=en&amp;theme=bartik&amp;include=eJxtzFEKAjEMRdENdeySJM3EEibNkyYO1NULfgiKv5fDjRUpozYKKY1m6lHZKGJd_qQhEdQlCmNKdcxBps-P6oZGtkUuU--_O-DYnE7tlAovRguPvO4ajFPmqnBhWLmppczKdH-z74ljlxceeUU5" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_ox22BHoBj51rLBxqjNBQygVchGYXqPP8zFd5a2OBxOo.css?delta=1&amp;language=en&amp;theme=bartik&amp;include=eJxtzFEKAjEMRdENdeySJM3EEibNkyYO1NULfgiKv5fDjRUpozYKKY1m6lHZKGJd_qQhEdQlCmNKdcxBps-P6oZGtkUuU--_O-DYnE7tlAovRguPvO4ajFPmqnBhWLmppczKdH-z74ljlxceeUU5" />
+<link rel="stylesheet" media="print" href="/sites/default/files/css/css_XLSZzyVxoWl53F7YW6MAFuDtAiShVKUPqDc7tBSPRL8.css?delta=2&amp;language=en&amp;theme=bartik&amp;include=eJxtzFEKAjEMRdENdeySJM3EEibNkyYO1NULfgiKv5fDjRUpozYKKY1m6lHZKGJd_qQhEdQlCmNKdcxBps-P6oZGtkUuU--_O-DYnE7tlAovRguPvO4ajFPmqnBhWLmppczKdH-z74ljlxceeUU5" />
+
+    
+  </head>
+  <body class="layout-one-sidebar layout-sidebar-first path-node page-node-type-book">
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div id="page-wrapper">
+  <div id="page">
+    <header id="header" class="header" role="banner">
+      <div class="section layout-container clearfix">
+          <div class="region region-secondary-menu">
+    
+<nav role="navigation" aria-labelledby="block-bartik-account-menu-menu" id="block-bartik-account-menu" class="block block-menu navigation menu--account">
+            
+  <h2 class="visually-hidden" id="block-bartik-account-menu-menu">User account menu</h2>
+  
+
+        <div class="content">
+            <div class="menu-toggle-target menu-toggle-target-show" id="show-block-bartik-account-menu"></div>
+      <div class="menu-toggle-target" id="hide-block-bartik-account-menu"></div>
+      <a class="menu-toggle" href="#show-block-bartik-account-menu">Show &mdash; User account menu</a>
+      <a class="menu-toggle menu-toggle--hide" href="#hide-block-bartik-account-menu">Hide &mdash; User account menu</a>
+      
+              <ul class="clearfix menu">
+                    <li class="menu-item">
+        <a href="/user/login" data-drupal-link-system-path="user/login">Log in</a>
+              </li>
+        </ul>
+  
+
+
+    </div>
+  </nav>
+
+  </div>
+
+          <div class="clearfix region region-header">
+    <div id="block-bartik-branding" class="clearfix site-branding block block-system block-system-branding-block">
+  
+    
+        <a href="/" rel="home" class="site-branding__logo">
+      <img src="/sites/default/files/Untitled%20design%20%281%29.png" alt="Home" />
+    </a>
+        <div class="site-branding__text">
+              <div class="site-branding__name">
+          <a href="/" rel="home">HK Auditory Neuroscience</a>
+        </div>
+                </div>
+  </div>
+
+  </div>
+
+          <div class="region region-primary-menu">
+    
+<nav role="navigation" aria-labelledby="block-bartik-main-menu-menu" id="block-bartik-main-menu" class="block block-menu navigation menu--main">
+            
+  <h2 class="visually-hidden" id="block-bartik-main-menu-menu">Main navigation</h2>
+  
+
+        <div class="content">
+            <div class="menu-toggle-target menu-toggle-target-show" id="show-block-bartik-main-menu"></div>
+      <div class="menu-toggle-target" id="hide-block-bartik-main-menu"></div>
+      <a class="menu-toggle" href="#show-block-bartik-main-menu">Show &mdash; Main navigation</a>
+      <a class="menu-toggle menu-toggle--hide" href="#hide-block-bartik-main-menu">Hide &mdash; Main navigation</a>
+      
+              <ul class="clearfix menu">
+                    <li class="menu-item">
+        <a href="/" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                <li class="menu-item">
+        <a href="/outputs" data-drupal-link-system-path="node/13">Outputs</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/people" data-drupal-link-system-path="node/5">People</a>
+              </li>
+                <li class="menu-item">
+        <a href="/projects" data-drupal-link-system-path="node/3">Projects</a>
+              </li>
+                <li class="menu-item">
+        <a href="/docs" data-drupal-link-system-path="node/98">Documentation</a>
+              </li>
+        </ul>
+  
+
+
+    </div>
+  </nav>
+
+  </div>
+
+      </div>
+    </header>
+          <div class="highlighted">
+        <aside class="layout-container section clearfix" role="complementary">
+            <div class="region region-highlighted">
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+  </div>
+
+        </aside>
+      </div>
+            <div id="main-wrapper" class="layout-main-wrapper layout-container clearfix">
+      <div id="main" class="layout-main clearfix">
+          <div class="region region-breadcrumb">
+    <div id="block-bartik-breadcrumbs" class="block block-system block-system-breadcrumb-block">
+  
+    
+      <div class="content">
+        <nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+    <ol>
+          <li>
+                  <a href="/">Home</a>
+              </li>
+          <li>
+                  <a href="/node"></a>
+              </li>
+        </ol>
+  </nav>
+
+    </div>
+  </div>
+
+  </div>
+
+        <main id="content" class="column main-content" role="main">
+          <section class="section">
+            <a id="main-content" tabindex="-1"></a>
+              <div class="region region-content">
+    <div id="block-bartik-page-title" class="block block-core block-page-title-block">
+  
+    
+      <div class="content">
+      
+
+  <h1 class="title page-title"><span class="field field--name-title field--type-string field--label-hidden"> Spike Detection</span>
+</h1>
+
+
+    </div>
+  </div>
+<div id="block-bartik-content" class="block block-system block-system-main-block">
+  
+    
+      <div class="content">
+      
+<article data-history-node-id="120" class="node node--type-book node--view-mode-full clearfix">
+  <header>
+    
+          
+      </header>
+  <div class="node__content clearfix">
+      <div class="layout layout--onecol">
+    <div  class="layout__region layout__region--content">
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><h1>&nbsp;</h1>
+<p></p><figure role="group" class="caption caption-img align-center">
+<img alt="Spike Detection" data-entity-type="file" data-entity-uuid="f4fc2164-9330-4b3b-acd2-0cf1aea33091" src="/sites/default/files/inline-images/SpikeDetection.png" width="2560" height="1343" loading="lazy">
+<figcaption>Figure 16: The red dots show the spikes detected by the <strong>Spikeprocessing class</strong> of the Datapipeline API</figcaption>
+</figure>
+
+<p>Spike detection algorithms exist in a plentiful amount. For the purpose of online processing multichannel neural data with Python, the algorithm implemented in the Spikeprocessing class is rather simple but yields usable results. The implementation roughly follows the spike detection method described in <a href="http://www.scholarpedia.org/article/Spike_sorting">http://www.scholarpedia.org/article/Spike_sorting</a> and Hernan Gonzalo Rey, Carlos Pedreira, and Rodrigo Quian Quiroga. "Past, present, and future of spike sorting techniques" Brain Research Bulletin, vol. 119, 2015. doi:10.1016/j.brainresbull.2015.04.007<br>
+The cornerstone of the algorithm is the computation of a sensible threshold in a way that is robust against noise, artifacts, and outliers.</p>
+<p>Let |x| be the absolute value of our neural signal. We know that for Gaussian noise, the median of the absolute value of the signal will be 0.6745σ, where σ is the standard deviation of the Gaussian noise. Thus we can compute the threshold for our spike signal as:</p>
+<p>&nbsp;</p>
+<p></p><figure role="group" class="caption caption-img align-center">
+<img alt="robust threshold" data-entity-type="file" data-entity-uuid="8bf91560-9897-43eb-8127-af84bd904d52" src="/sites/default/files/inline-images/RobustThreshold.png" width="598" height="164" loading="lazy">
+<figcaption>Figure 17: This is a very commonly used spike threshold implemented in commercial as well as open-source software.</figcaption>
+</figure>
+
+<p><em>The assumption here is, that action potentials have a greater amplitude than the background noise. Thus, thresholding methods attempt to accurately estimate background noise levels.</em><br>
+By using the median we make sure that our method is robust against noise, artifacts, and outliers and therefore superior to the regular standard deviation. Furthermore, this method is computationally very inexpensive and therefore ideal for multichannel online spike detection in Python.</p>
+<p></p><figure role="group" class="caption caption-img align-center">
+<img alt="improved threshold" data-entity-type="file" data-entity-uuid="5808f032-ad6e-4c0e-ac1d-5c6b54d20338" src="/sites/default/files/inline-images/ImprovedSpikeThreshold.jpg" width="960" height="720" loading="lazy">
+<figcaption>Figure 18: The difference between the standard threshold using the regular standard deviation and the median method can be clearly seen. The improved threshold is much closer to what a human would select. It is also clear that the standard threshold misses a lot of smaller action potentials.</figcaption>
+</figure>
+
+<p>&nbsp;</p>
+</div>
+      
+    </div>
+  </div>
+
+  <nav id="book-navigation-98" class="book-navigation" role="navigation" aria-labelledby="book-label-98">
+    
+          <h2 class="visually-hidden" id="book-label-98">Book traversal links for  Spike Detection</h2>
+      <ul class="book-pager">
+              <li class="book-pager__item book-pager__item--previous">
+          <a href="/node/118" rel="prev" title="Go to previous page"><b>‹</b> Filtering neural data: What is the actual shape of an action potential? </a>
+        </li>
+                    <li class="book-pager__item book-pager__item--center">
+          <a href="/EphysPipeline" title="Go to parent page">Up</a>
+        </li>
+                    <li class="book-pager__item book-pager__item--next">
+          <a href="/node/117" rel="next" title="Go to next page">Spike Detection and sorting methods <b>›</b></a>
+        </li>
+          </ul>
+      </nav>
+
+  </div>
+</article>
+
+    </div>
+  </div>
+
+  </div>
+
+          </section>
+        </main>
+                  <div id="sidebar-first" class="column sidebar">
+            <aside class="section" role="complementary">
+                <div class="region region-sidebar-first">
+    <div class="search-block-form block block-search container-inline" data-drupal-selector="search-block-form" id="block-bartik-search" role="search">
+  
+      <h2>Search</h2>
+    
+      <div class="content container-inline">
+      <form action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8" class="search-form search-block-form">
+  <div class="js-form-item form-item js-form-type-search form-type-search js-form-item-keys form-item-keys form-no-label">
+      <label for="edit-keys" class="visually-hidden">Search</label>
+        <input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" class="form-search" />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input class="search-form__submit button js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="Search" />
+</div>
+
+</form>
+
+    </div>
+  </div>
+
+  </div>
+
+            </aside>
+          </div>
+                      </div>
+    </div>
+        <footer class="site-footer">
+      <div class="layout-container">
+                          <div class="site-footer__bottom">
+              <div class="region region-footer-fifth">
+    
+<nav role="navigation" aria-labelledby="block-bartik-footer-menu" id="block-bartik-footer" class="block block-menu navigation menu--footer">
+            
+  <h2 class="visually-hidden" id="block-bartik-footer-menu">Footer menu</h2>
+  
+
+        <div class="content">
+            <div class="menu-toggle-target menu-toggle-target-show" id="show-block-bartik-footer"></div>
+      <div class="menu-toggle-target" id="hide-block-bartik-footer"></div>
+      <a class="menu-toggle" href="#show-block-bartik-footer">Show &mdash; Footer menu</a>
+      <a class="menu-toggle menu-toggle--hide" href="#hide-block-bartik-footer">Hide &mdash; Footer menu</a>
+      
+              <ul class="clearfix menu">
+                    <li class="menu-item">
+        <a href="/contact" data-drupal-link-system-path="contact">Contact</a>
+              </li>
+        </ul>
+  
+
+
+    </div>
+  </nav>
+<div id="block-bartik-powered" class="block block-system block-system-powered-by-block">
+  
+    
+      <div class="content">
+      <span>Powered by <a href="https://www.drupal.org">Drupal</a></span>
+    </div>
+  </div>
+
+  </div>
+
+          </div>
+              </div>
+    </footer>
+  </div>
+</div>
+
+  </div>
+
+    
+    
+  </body>
+</html>
